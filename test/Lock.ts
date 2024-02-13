@@ -7,7 +7,7 @@ const {
 } = require("@nomicfoundation/hardhat-toolbox/network-helpers");
 
 describe("Todo", function () {
-  // Define a fixture function for deploying TodoContract
+ 
   async function deployTodoContract() {
     const TodoContract = await ethers.getContractFactory("Todo");
     const todoContract = await TodoContract.deploy();
@@ -15,7 +15,7 @@ describe("Todo", function () {
     return { todoContract, owner };
   }
 
-  // Load fixture for each test to ensure consistent setup
+ 
   beforeEach(async function () {
     await loadFixture(deployTodoContract);
   });
